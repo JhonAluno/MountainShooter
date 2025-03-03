@@ -14,4 +14,4 @@ class Menu:
         pygame.display.flip()
         pass
 
-    #parei por dores na costa
+    #parei por dores na costa#
