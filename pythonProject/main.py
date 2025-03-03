@@ -1,5 +1,4 @@
 import pygame
-import pygame.event
 
 print('Setup Start')
 pygame.init()
