@@ -13,3 +13,5 @@ class Menu:
         self.window.blit(source=self.surf, dest=self.rect)
         pygame.display.flip()
         pass
+
+    #parei por dores na costa
