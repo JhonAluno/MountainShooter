@@ -1,6 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import pygame
+
 import pygame.image
+from pygame import Surface, Rect
+from pygame.font import Font
+
+from const import WIN_WIDTH
 
 
 class Menu:
@@ -10,8 +16,17 @@ class Menu:
         self.rect = self.surf.get_rect()
 
     def run(self, ):
-        self.window.blit(source=self.surf, dest=self.rect)
-        pygame.display.flip()
-        pass
+        pygame.mixer_music.load('./asset/Menu.mp3')
+        pygame.mixer_music.play(-1)
+        while True:
 
-    #parei por dores na costa#
+            self.window.blit(source=self.surf, dest=self.rect)
+            pygame.display.flip()
+
+            # Check for all events
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()  # Close Window
+                    quit()  # end pygame
+
+
